@@ -60,7 +60,5 @@ jQuery Filtr Plugin has been tested with jQuery 1.7+ on all major browsers:
 ## Problems & Bugs?
 Make sure that you have a *functional* [jsfiddle](http://jsfiddle.net/) exemplifying your problem and open an [Issue](https://github.com/hudsonnicoletti/jQuery-Filtr-Plugin/issues) for us.
 
-lorem
-
 
 
