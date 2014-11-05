@@ -28,13 +28,18 @@ http://hudsonncioletti.github.io/jQuery-Filtr-Plugin/
     </div>
     
     <div class="filter-me">
-        <pVestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.</p>
+        <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.</p>
         <span> 03:00 </span>
     </div>
 ```
-
+### The Magic
 ```javascript
-$('#yourElement').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', doSomething);
+$('#yourElement').filtr({
+    target : ".filter-me" // Object to be filterd
+    targetChild : "span"  // Child of Object to be filterd ( not required )
+    caseSensitive : false // Filter strictly  ( true || false , default is false )
+    invert : false        // Shows non maches ( true || false , default is false )
+});
 ```
 
 ##Features
