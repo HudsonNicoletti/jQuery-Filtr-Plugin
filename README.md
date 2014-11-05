@@ -8,7 +8,7 @@ http://hudsonncioletti.github.io/jQuery-Filtr-Plugin/
 
 ### Search Engine
 ```html
-    <input type="text" id="search" />
+    <input type="text" id="yourSearchElement" />
 ```
 ### Objects to Filter
 ```html
@@ -34,7 +34,7 @@ http://hudsonncioletti.github.io/jQuery-Filtr-Plugin/
 ```
 ### The Magic
 ```javascript
-$('#yourElement').filtr({
+$('#yourSearchElement').filtr({
     target : ".filter-me" // Object to be filterd
     targetChild : "span"  // Child of Object to be filterd ( not required )
     caseSensitive : false // Filter strictly  ( true || false , default is false )
