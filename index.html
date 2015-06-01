@@ -43,11 +43,9 @@
 
                 <div class="collapse navbar-collapse" id="navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li><a class="active" href="about.html">About</a></li>
-                        <li><a href="education.html">Code Examples</a></li>
-                        <li><a href="work.html">Work experience</a></li>
-                        <li><a href="skills.html">Skills</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a class="active" href="about">About</a></li>
+                        <li><a href="code">Code Examples</a></li>
+                        <li><a href="live">Live Demo</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
@@ -58,19 +56,76 @@
         
         <!-- About -->
         <div class="content about active">
-            <h2>Hello, world.</h2>
-            <h1><b>I’m a developer & designer in Melbourne.</b></h1>
-            <button class="btn btn-1 btn-1c margin-top">Download my resume</button>
+            <h2>Hello, world !</h2>
+            <h1><b>Thanks for stopping by ! This is a simple jQuery plugin i've made for filtering content easily.</b></h1>
+            <a href="https://github.com/HudsonNicoletti/jQuery-Filtr-Plugin/"><button class="btn btn-1 btn-1c margin-top">View in GitHub</button></a>
+            <a href="jQuery.filtr.min.js" download><button class="btn btn-1 btn-1c margin-top">Download Now !</button></a>
         </div>
-
-        <footer>            
-            <ul class="social">
-                <li>Get social</li>
-                <li><a href="#"><img src="assets/img/facebook.png" alt=""></a></li>
-                <li><a href="#"><img src="assets/img/twitter.png" alt=""></a></li>
-                <li><a href="#"><img src="assets/img/youtube.png" alt=""></a></li>
+        
+        <!-- Code -->
+        <div class="content code">
+            <h2 class="title"><span class="glyphicon glyphicon-book" aria-hidden="true"></span>Code Examples</h2>
+            <p class="subtitle">Totaly flexible</p>
+            
+            <ul>
+                <li><span class="bigger"><span class="glyphicon glyphicon-tags" aria-hidden="true"></span>&nbsp;&nbsp;Search Input:</span></li>
+                <li>
+                <span class="smaller">
+                    <pre> &lt;input type="text" id="yourSearchElement" /></pre>
+                </span>
+                </li>
+                
+                <li><span class="bigger"><span class="glyphicon glyphicon-tags" aria-hidden="true"></span>&nbsp;&nbsp;jQuery:</span></li>
+                <li>
+                <span class="smaller">
+                    <pre>
+$('#yourSearchElement').filtr({
+    target : ".filter-me", // Object to be filterd
+    targetChild : "span",  // Child of Object to be filterd ( not required )
+    caseSensitive : false, // Filter strictly  ( true || false , default is false )
+    invert : false,        // Shows non maches ( true || false , default is false )
+});</pre>
+                </span>
+                </li>
+                
+                <li><span class="bigger"><span class="glyphicon glyphicon-tags" aria-hidden="true"></span>&nbsp;&nbsp;Items:</span></li>
+                <li>
+                <span class="smaller">
+                    <pre>
+&lt;div class=&quot;filter-me&quot;&gt; 
+    &lt;p&gt;Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.&lt;/p&gt; 
+    &lt;span&gt; 00:00 &lt;/span&gt; 
+&lt;/div&gt;
+&lt;div class=&quot;filter-me&quot;&gt; 
+    &lt;p&gt;Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.&lt;/p&gt; 
+    &lt;span&gt; 01:00 &lt;/span&gt; 
+&lt;/div&gt;</pre>
+                </span>
+                </li>
             </ul>
-        </footer>
+        </div>
+        
+        <!-- Live -->
+        <div class="content live">
+            <h2>Live Demo !</h2>
+            
+            <div class="field">
+                <input type="text" id="search" placeholder="Type in me !">
+            </div>
+            
+            <ul class="filter-me">
+                <li><span class="smaller"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span>Address</span></li>
+                <li><span class="bigger">121 King Street, Lorem iso</span></li>
+                <li><span class="bigger">Victoria 3000 Australia</span></li>
+            </ul>
+            
+            <ul class="filter-me">
+                <li><span class="smaller"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>Contact</span></li>
+                <li><span class="bigger">How can I help you?</span></li>
+            </ul>
+            
+        </div>
+        
     </div>
 
     <!-- Java Script -->
@@ -78,6 +133,19 @@
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/app.js"></script>
     <script src="assets/js/custom.js"></script>
+    <script src="jQuery.filtr.js"></script>
+    <script>
+
+    $(function(){
+        
+        $('#search').filtr({
+            target : ".filter-me", // Object to be filterd
+            caseSensitive : false, // Filter strictly  ( true || false , default is false )
+            invert : false,        // Shows non maches ( true || false , default is false )
+        });
+        
+    });
     
+    </script>
 </body>
 </html>
