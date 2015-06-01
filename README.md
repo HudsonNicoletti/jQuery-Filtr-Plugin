@@ -2,7 +2,7 @@
 A jQuery Plugin to filter content 
 
 #Live Demonstration & Usage Examples
-http://hudsonncioletti.github.io/jQuery-Filtr-Plugin/
+http://hudsonnicoletti.github.io/jQuery-Filtr-Plugin/
 
 ## Usage
 
